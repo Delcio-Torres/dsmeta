@@ -3,14 +3,14 @@
   height: 45px;
   width: 45px;
   background: rgba(255, 107, 114, 0.1);
-  border: 1px solid #ff6b72;
+  border: 1px solid #cf292f;
   border-radius: 10px;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
 }
 
 .dsmeta-red-btn img {
-    width: 19px;
+    width: 20px;
 }

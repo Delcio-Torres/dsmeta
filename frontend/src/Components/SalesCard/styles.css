@@ -64,6 +64,11 @@
   justify-content: center;
 }
 
+.dsmeta-red-btn-container2 {
+  display: none;
+  justify-content: center;
+}
+
 .show576 {
   display: none;
 }

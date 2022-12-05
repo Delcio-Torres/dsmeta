@@ -34,12 +34,12 @@ public class Sale {
 		this.date = date;
 	}
 
-	public Long getIg() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setIg(Long ig) {
-		this.id = ig;
+	public void setId(Long id) {
+		this.id = id;
 	}
 
 	public String getSellerName() {

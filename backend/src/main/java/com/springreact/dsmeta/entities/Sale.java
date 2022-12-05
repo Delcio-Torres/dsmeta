@@ -1,6 +1,5 @@
 package com.springreact.dsmeta.entities;
 
-
 import java.time.LocalDate;
 
 import jakarta.persistence.Entity;

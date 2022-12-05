@@ -5,7 +5,7 @@ import './styles.css';
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { BASE_URL } from "../../utils/request";
-import { Sale } from "../../model/sale";
+import { SaleProp } from "../../model/sale";
 
 function SalesCard() {
 
@@ -15,14 +15,13 @@ function SalesCard() {
   const [minDate, setMinDate] = useState(min);
   const [maxDate, setMaxDate] = useState(max);
 
-  const [sales, setSales] = useState<Sale[]>([]);
-
+  const [sales, setSales] = useState<SaleProp[]>([]);
 
   useEffect(() => {
 
     const dmin = minDate.toISOString().slice(0, 10);
     const dmax = maxDate.toISOString().slice(0, 10);
-
+ 
     axios.get(`${BASE_URL}/sales?minDate=${dmin}&maxDate=${dmax}`)
       .then(response => {
         setSales(response.data.content);

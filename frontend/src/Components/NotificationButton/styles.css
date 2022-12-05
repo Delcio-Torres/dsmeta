@@ -8,7 +8,12 @@
   display: flex;
   align-items:center;
   justify-content:center;
-  cursor:pointer;
+  cursor:pointer;  
+}
+
+.dsmeta-red-btn:hover {
+  border-color: blanchedalmond;
+  background: rgba(255, 255, 255, 0.603);
 }
 
 .dsmeta-red-btn img {

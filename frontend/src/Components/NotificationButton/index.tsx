@@ -12,10 +12,10 @@ function handleClick(id: number) {
   axios(`${BASE_URL}/sales`)
     .then(Response => {
       console.log(id)
-  })
+    })
 }
 
-function NotificationButton({saleId}: Props) {
+function NotificationButton({ saleId }: Props) {
   return (
     <div className="dsmeta-red-btn" onClick={() => handleClick(saleId)}>
       <img src={icon} alt="Notificar" />

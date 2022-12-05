@@ -1,5 +1,5 @@
-export type Sale = {
-  id: 6
+export type SaleProp = {
+  id: number;
   sellerName: string;
   date: string;
   visited: number;

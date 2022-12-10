@@ -25,7 +25,6 @@ public class Sale {
 	}
 
 	public Sale(Long id, String sellerName, Integer visited, Integer deals, Double amount, LocalDate date) {
-		super();
 		this.id = id;
 		this.sellerName = sellerName;
 		this.visited = visited;

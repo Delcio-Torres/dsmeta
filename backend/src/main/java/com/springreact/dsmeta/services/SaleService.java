@@ -3,6 +3,7 @@ package com.springreact.dsmeta.services;
 import java.time.Instant;
 import java.time.LocalDate;
 import java.time.ZoneId;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -18,40 +19,24 @@ public class SaleService {
 	@Autowired
 	private SaleRepository repository;
 	
+	
+	public Sale findById(Long id) {
+		Optional<Sale> registro = repository.findById(id);
+		return registro.get();
+	}
+	
+	public Page<Sale> findAll(Pageable pageable){
+		Page<Sale> result = repository.findAll(pageable); 
+		return result;
+	}
+	
 	LocalDate today = LocalDate.ofInstant(Instant.now(), ZoneId.systemDefault());
 	
-	public Page<Sale> findSales(String minDate, String maxDate, Pageable pageable) {
+	public Page<Sale> findByDateBetween(String minDate, String maxDate, Pageable pageable) {
 		
 		LocalDate min = minDate.equals("") ? today.minusDays(365) : LocalDate.parse(minDate);
 		LocalDate max = maxDate.equals("") ? today : LocalDate.parse(maxDate);
 		
-		return repository.findSales(min, max, pageable);
+		return repository.findByDateBetween(min, max, pageable);
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 }
